@@ -11,7 +11,7 @@ interface PortalPair {
 export const createPortal = (portalKey: string, options?: PortalOptions) => {
   const pair: PortalPair = {
     In: ({ children, open = true }) => {
-      if (open) return null;
+      if (!open) return null;
       return (
         <In
           portalKey={portalKey}
