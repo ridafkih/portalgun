@@ -5,7 +5,12 @@ export const usePortals = () => {
   const { portals, setPortals } = useContext(PortalGunContext) ?? {};
 
   const mountPortal = (portalKey: string, children: React.ReactNode) => {
-    setPortals?.((oldPortals) => ({ ...oldPortals, [portalKey]: children }));
+    setPortals?.((oldPortals) => {
+      if (oldPortals[portalKey])
+        throw Error(`Duplicate portal with key ${portalKey}`);
+
+      return { ...oldPortals, [portalKey]: children };
+    });
   };
 
   const dismountPortal = (portalKey: string) => {
