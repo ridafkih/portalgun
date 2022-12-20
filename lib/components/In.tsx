@@ -1,6 +1,6 @@
+import { type FC, type PropsWithChildren, useEffect } from "react";
 import { usePortals } from "hooks/use-portal-hook";
-import { FC, PropsWithChildren, useEffect } from "react";
-import { PortalComponentProps } from "types/component-types";
+import type { PortalComponentProps } from "types/component-types";
 
 export const In: FC<PropsWithChildren<PortalComponentProps>> = ({
   children,

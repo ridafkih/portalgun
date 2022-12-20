@@ -1,4 +1,9 @@
-import { createContext, FC, PropsWithChildren, useState } from "react";
+import {
+  type FC,
+  type PropsWithChildren,
+  createContext,
+  useState,
+} from "react";
 
 type PortalMap = Record<string, React.ReactNode>;
 
