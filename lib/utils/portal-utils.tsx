@@ -1,10 +1,10 @@
-import type { PropsWithChildren } from "react";
+import type { FC, PropsWithChildren } from "react";
 import { In } from "components/In";
 import { Out } from "components/Out";
 
 interface PortalPair {
-  Out: React.FC;
-  In: React.FC<PropsWithChildren>;
+  Out: FC;
+  In: FC<PropsWithChildren>;
 }
 
 export const createPortal = (portalKey: string) => {
