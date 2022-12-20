@@ -1,0 +1,8 @@
+{
+  "name": "portalgun",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "types": "index.ts",
+  "author": "Rida F'kih <hello@rida.dev>",
+  "license": "MIT"
+}
