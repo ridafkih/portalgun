@@ -1,8 +1,8 @@
 {
   "name": "@ridafkih/portalgun",
   "version": "0.1.4",
-  "main": "index.ts",
-  "types": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Rida F'kih <hello@rida.dev>",
   "license": "MIT",
   "scripts": {
