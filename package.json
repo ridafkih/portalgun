@@ -1,6 +1,6 @@
 {
   "name": "@ridafkih/portalgun",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "index.ts",
   "types": "index.ts",
   "author": "Rida F'kih <hello@rida.dev>",
