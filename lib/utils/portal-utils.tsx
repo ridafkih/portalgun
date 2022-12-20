@@ -5,18 +5,21 @@ import type { PortalOptions } from "types/options-types";
 
 interface PortalPair {
   Out: FC;
-  In: FC<PropsWithChildren>;
+  In: FC<PropsWithChildren<{ open?: boolean }>>;
 }
 
 export const createPortal = (portalKey: string, options?: PortalOptions) => {
   const pair: PortalPair = {
-    In: ({ children }) => (
-      <In
-        portalKey={portalKey}
-        allowDuplicates={options?.allowDuplicates}
-        children={children}
-      />
-    ),
+    In: ({ children, open }) => {
+      if (!open) return null;
+      return (
+        <In
+          portalKey={portalKey}
+          allowDuplicates={options?.allowDuplicates}
+          children={children}
+        />
+      );
+    },
     Out: () => <Out portalKey={portalKey} />,
   };
 
