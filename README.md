@@ -14,21 +14,21 @@
 
 ## Installation
 
-To install `portalgun`, simply use your favourite Node.js package manager.
+To install `@ridafkih/portalgun`, simply use your favourite Node.js package manager.
 
 ```bash
-yarn add portalgun
+yarn add @ridafkih/portalgun
 ```
 
 ```bash
-npm install portalgun
+npm install @ridafkih/portalgun
 ```
 
 ## Usage
 
 ```tsx
 // ...
-import { PortalGunProvider, createPortal } from "portalgun";
+import { PortalGunProvider, createPortal } from "@ridafkih/portalgun";
 
 const MyPortal = createPortal("unique-key");
 
