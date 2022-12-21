@@ -5,13 +5,15 @@ import type { PortalComponentProps } from "types/component-types";
 export const In: FC<PropsWithChildren<PortalComponentProps>> = ({
   children,
   portalKey,
-  allowDuplicates,
 }) => {
   const { mountPortal, dismountPortal } = usePortals();
 
   useEffect(() => {
-    mountPortal(portalKey, children, { allowDuplicates });
-    return () => dismountPortal(portalKey);
+    mountPortal(portalKey, children);
+
+    return () => {
+      if (!children) dismountPortal(portalKey);
+    };
   }, [children]);
 
   return <></>;
